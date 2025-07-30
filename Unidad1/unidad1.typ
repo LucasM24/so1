@@ -58,8 +58,11 @@ usuario*.
 == ¿Qué es un sistema operativo?
 
 El objetivo fundamental de un sistema de computación es facilitar tareas y
-procesos a la hora de resolver un problema. Los sistemas de computación tienen
-procesos de entrada y salida de datos pero lograr esto manejando directamente el
-hardware es complicado. Debido a esto se creo un software que le permite al
-usuario administrar el hardware de una computadora de una forma más sencilla.
-Este software se llama sistema operativo 
+procesos a la hora de resolver un problema. El hardware de dichos sistemas se
+construye para lograr ese objetivo, pero manejar directamente el
+hardware es complicado. Debido a esto se creo un software el cual realiza dos
+funciones esenciales no relacionadas:
+
+- Brindar a los programadores de aplicaciones y a las aplicaciones mismas una
+ abstración clara de un conjunto de recursos en lugar de trabajar con hardware
+ complicado.
