@@ -55,14 +55,40 @@ claros a la hora de que acciones realiza o programas pertenecen al sistema
 operativo y por tanto ejecutarse en *modo kernel* y cuales pertenecen al *modo
 usuario*.
 
-== ¿Qué es un sistema operativo?
+=== ¿Qué es un sistema operativo?
 
 El objetivo fundamental de un sistema de computación es facilitar tareas y
 procesos a la hora de resolver un problema. El hardware de dichos sistemas se
-construye para lograr ese objetivo, pero manejar directamente el
-hardware es complicado. Debido a esto se creo un software el cual realiza dos
-funciones esenciales no relacionadas:
+construye para lograr este objetivo, pero manejar directamente el hardware es
+complicado. Debido a esto se creo un software el cual realiza dos funciones
+esenciales no relacionadas:
 
-- Brindar a los programadores de aplicaciones y a las aplicaciones mismas una
- abstración clara de un conjunto de recursos en lugar de trabajar con hardware
- complicado.
+  - Brindar a los programadores de aplicaciones y a las aplicaciones mismas una
+    abstración clara de un conjunto de recursos en lugar de trabajar directamente
+    con el hardware complicado.
+
+  - Manejar los recursos del hardware.
+
+Estas aplicaciones facilitan la gestión de recursos como memoria de ram, espacio
+de almacenamiento, manejo de archivos, control de operaciones de E/S, control de
+procesos, etc.
+
+=== Componentes de un sistema operativo
+
+- El kernel es la parte del sistema operativo que se ejecuta en un modo
+  protegido y controla el acceso de los programas de usuario al hardware
+  subyacente (cpu, terminales, puertos de red) y construcciones de software
+  (sistema de archivos, protocolos de red). El kernel contiene las instalaciones
+  básicas del sistema; creación y administración de procesos y provee funciones
+  para acceder al sistema de archivos y las instalaciones de comunicación.
+  Dichas funciones son conocidas como system-call las cuales se presentan a los
+  procesos de usuario como librerias de subrutinas. Las system-calls son la
+  única interfaz que los procesos poseen para comunicarse con estas
+  instalaciones.
+  Fuente: https://docs.freebsd.org/en/books/design-44bsd/
+
+- Shell o interfaz de usuario gráfica
+  Fuente: Abraham-Silberchatz-operating-system-concepts capitulo 2, página 58
+
+- Programas de sistema (que se encuentran ligados al sistema operativo sysadmin,
+  compiladores, bibliotecas)
